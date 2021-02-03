@@ -1,0 +1,8 @@
+{
+  "name": "matintemovil",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

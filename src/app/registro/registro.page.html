@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    
+    
+      <ion-button (click)="irLogin()">
+      <ion-icon name="chevron-back-outline" slot="start"></ion-icon>      
+    </ion-button>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid>
+    
+    <ion-row class="ion-justify-content-center title">
+      
+    <h1>Ingrese sus datos</h1>
+     
+    </ion-row>
+    
+    <ion-row class="ion-justify-content-center input">
+      <ion-col size="10">    
+      
+        <ion-input type="tel" placeholder="Cedula del representante" [(ngModel)]="cliente.cedula" name="cedula"></ion-input>
+        <ion-input type="text" placeholder="Nombres del representante" required clearInput [(ngModel)]="cliente.nombre" name="nombre"></ion-input>   
+        <ion-input type="text" placeholder="Apellidos del representante" required clearInput [(ngModel)]="cliente.apellido" name="apellidos"></ion-input>
+      
+    </ion-col>
+    
+  </ion-row>
+
+    
+    <ion-row class="ion-justify-content-center">
+      <ion-button (click)="registro()">Registrar</ion-button>
+    </ion-row>
+    
+  </ion-grid>
+
+</ion-content>

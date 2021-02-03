@@ -1,0 +1,36 @@
+#registro{
+    position: fixed;
+    bottom:0;
+    right:0;
+    left:0;
+    padding: 15px;
+    background-color:#67C657;
+    ion-label{
+        color:white;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+}
+
+
+
+#grid{
+    height: 65% !important;
+}
+#logo{
+    height: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#title{
+    color: #3f9d2f;
+    font-weight: bold;
+    font-size: 44px;
+}
+
+ion-button{
+    margin-top:15px;
+    --background: #67C657;
+  }

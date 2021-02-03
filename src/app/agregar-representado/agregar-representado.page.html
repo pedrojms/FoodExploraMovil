@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-buttons slot="end" (click)="cerrarModal()">
+      <ion-button>
+      <ion-icon name="close-circle" slot="start"></ion-icon>
+      Cerrar
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row class="ion-justify-content-center title">
+    <h1 >Nuevo representado</h1>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="10">
+       <ion-input type="text" placeholder="Nombres del representado" required clearInput [(ngModel)]="representado.nombre" name="nombres"></ion-input>
+       <ion-input type="text" placeholder="Apellido del representado" required clearInput [(ngModel)]="representado.apellido" name="apellidos"></ion-input>
+       <ion-input type="text" placeholder="Edad del representado" required clearInput [(ngModel)]="representado.edad" name="edad"></ion-input>
+       <ion-input type="text" placeholder="Codigo QR" required clearInput [(ngModel)]="representado.codigo_qr" name="codigoqr"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center qr">
+    <ion-button (click)="escanearQR()">Escanear QR</ion-button>
+  </ion-row>
+  <ion-row  class="ion-justify-content-center">
+    <ion-button id="agg" (click)="agregarRepresentado()">Agregar</ion-button>
+  </ion-row>
+</ion-grid>
+</ion-content>

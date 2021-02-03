@@ -1,0 +1,105 @@
+ion-header{
+  --ion-background-color: #3f9d2f;
+  ion-label{
+    color:white;
+  }
+}
+
+#add{  
+  background-color:#3f9d2f;  
+}
+
+ion-item{
+  color: white;
+  --background: #67C657;
+
+}
+
+ion-select{
+  max-width: 100% !important;
+}
+
+#nino,#periodo{
+  background-color: #67C657;
+  ion-label{
+    color: white;
+  }
+  border-radius: 5px;
+}
+
+ion-button{
+  --background: #67C657;
+}
+
+h1{
+  color: #3f9d2f;
+  margin-top: 5px;
+}
+
+ion-label:hover{
+  color: white;
+}
+#photo{
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+#imgenv{
+  margin-bottom: 25px;
+}
+
+#des,#alm,#mer{
+  background-color: rgb(63, 157, 47,0.5) ;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  
+}
+
+#fecha{
+  margin-top:15px;
+  margin-bottom:0px;
+}
+
+ion-row{
+  #fecha{
+    font-size: 2em;
+  }
+}
+
+#hora{
+  border: 2px;
+}
+
+#fechaact{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#horact{
+  margin-bottom: 10px;
+}
+
+#mer{
+  margin-bottom:50px;
+}
+
+ion-row{
+  ion-col{
+    ion-label{
+      color: white;
+      font-size: 1.1em;
+    }
+  }
+
+}
+
+ion-row{
+  ion-col{
+    #sel{
+      color: #3f9d2f;
+      font-size: 1.1em;
+    }
+  }
+
+}
+

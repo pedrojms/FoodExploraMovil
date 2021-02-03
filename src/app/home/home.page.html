@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-label>Hola, {{this.storage.getUser()["nombre"]}}</ion-label>
+  <ion-button slot="end" (click)="addRepresentado()">
+    <ion-icon name="add-circle" slot= "icon-only">Agregar</ion-icon> 
+  </ion-button>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    
+    
+
+  
+  <ion-row id="fechaact" class="ion-justify-content-center">
+    <h1 id="fecha">{{fechaAct}}</h1>
+  </ion-row>
+  <ion-row id="horact" class="ion-justify-content-center"><h1 id="hora" >{{horaAct}}</h1></ion-row>
+  
+  <ion-row class="ion-justify-content-start">
+    <ion-col class="ion-text-center" size="4">
+    <ion-label id="sel">Seleccione:</ion-label>
+      </ion-col>
+  </ion-row>
+
+  <ion-row id="nino">
+    <ion-col size="12">
+  <ion-item >
+    
+    <ion-label>Niño/a:</ion-label>
+    
+    
+    <ion-select [(ngModel)]="rep" (ionChange)="getPhotos()" interface="popover" cancelText="No" okText="Si">
+      <ion-select-option *ngFor="let rep of representados" [value]="rep" >{{rep.representado.nombre}} {{rep.representado.apellido}}</ion-select-option>
+    </ion-select>
+  
+  </ion-item>
+</ion-col>
+    </ion-row>
+
+
+  <ion-row id="periodo">
+    <ion-col size="12">
+  <ion-item>
+    
+    <ion-label>Es hora de:</ion-label>
+    <ion-select [(ngModel)]="myMealTime" interface="popover" cancelText="No" okText="Si">
+      <ion-select-option value="Desayuno">Desayuno</ion-select-option>
+      <ion-select-option value="Almuerzo">Almuerzo</ion-select-option>
+      <ion-select-option value="Merienda">Merienda</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-col>
+</ion-row>
+  
+
+  <ion-row id="photo" class="ion-justify-content-center">
+  
+    <ion-button (click)="addPhotoToGallery()">
+      <ion-icon slot= "start" name="camera"></ion-icon>
+      Tomar foto</ion-button>
+  
+  </ion-row>
+
+  <!--<ion-row id="imgenv" class="ion-justify-content-center">
+  
+    <ion-button (click)="irPagina('photos')">Ver imágenes enviadas</ion-button>
+  
+  </ion-row>-->
+
+    <ion-row id="des" class="ion-justify-content-center">
+      <ion-col class="ion-text-center" size="8">
+        <ion-label id="labeldes" class="ion-text-center">Desayuno</ion-label>
+        <div *ngFor="let photos of this.storage.getPhotos()">
+        <ion-img *ngIf="photos['periodo']=='Desayuno'" [src]="photos.file" (click)="mostrarPopover($event,photos['id'])"></ion-img>
+      </div>
+      </ion-col>      
+    </ion-row>
+
+    <ion-row id="alm" class="ion-justify-content-center">
+      <ion-col class="ion-text-center" size="8">
+        <ion-label id="labelalm">Almuerzo</ion-label>
+        <div *ngFor="let photos of this.storage.getPhotos()">
+        <ion-img *ngIf="photos['periodo']=='Almuerzo'" [src]="photos.file" (click)="mostrarPopover($event,photos['id'])"></ion-img>
+      </div>
+      </ion-col>      
+    </ion-row>
+
+    <ion-row  id="mer" class="ion-justify-content-center">
+      <ion-col class="ion-text-center" size="8">
+        <ion-label id="labelmer">Merienda</ion-label>
+        <div *ngFor="let photos of this.storage.getPhotos()">
+        <ion-img *ngIf="photos['periodo']=='Merienda'" [src]="photos.file" (click)="mostrarPopover($event,photos['id'])" ></ion-img>
+      </div>
+      </ion-col>      
+    </ion-row>
+
+
+</ion-grid>
+</ion-content>
+

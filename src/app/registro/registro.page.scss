@@ -1,0 +1,39 @@
+
+
+
+ion-header{
+    --ion-background-color: #3f9d2f;
+    
+}
+
+
+.title{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color:#3f9d2f;
+    text-decoration: underline;
+}
+
+.input{    
+    
+    padding-bottom: 25px;
+    padding-top: 20px;
+    border-radius: 10px;
+    
+}
+
+
+
+ion-button{
+    margin-bottom: 15px;
+    --background: #67C657;
+  }
+
+  ion-input{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #3f9d2f;
+    border: solid 2px #3f9d2f;
+    
+    --placeholder-opacity: 1;
+}
