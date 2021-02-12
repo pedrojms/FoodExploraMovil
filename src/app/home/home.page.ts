@@ -54,7 +54,7 @@ export class HomePage {
   }
 
   ngOnInit(){
-    this.fechaAct= moment().format('LL');
+    this.fechaAct= moment().format('LL')
     this.horaAct= moment().format('h:mm a');
     this.showMealTime();
     this.getRepresentados();
